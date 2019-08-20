@@ -9,8 +9,8 @@ const middlewares = jsonServer.defaults({
 const PORT = process.env.PORT || 4000;
 
 // Set default middlewares (logger, static, cors and no-cache)
+server.use(cors());
 server.use(middlewares);
-server.use(cors({ origin: ["http://localhost:4000"], credentials: true }));
 
 if (process.env.NODE_ENV === "production") {
   // Add custom routes before JSON Server router
