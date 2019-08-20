@@ -1,0 +1,23 @@
+{
+  "name": "streams",
+  "version": "1.0.0",
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.9.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run rtmp\"",
+    "server": "cd api && npm install && node server.js",
+    "client": "npm start --prefix client",
+    "rtmp": "cd rtmpserver && node index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run rtmp\"",
+    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.2"
+  }
+}
