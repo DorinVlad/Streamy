@@ -5,7 +5,7 @@
     "node": "10.16.0",
     "npm": "6.9.0"
   },
-  "description": "",
+  "description": "Twitch like streaming application",
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run rtmp\"",
