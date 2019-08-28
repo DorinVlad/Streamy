@@ -3,4 +3,5 @@ Twitch like application using react, redux, node media server and json server. A
 
 ## Usage
 To start the application, navigate to the root directory in your terminal and execute the following command
+
 ```cd client && npm install && cd .. && npm run dev```
